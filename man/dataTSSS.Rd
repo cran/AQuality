@@ -1,19 +1,20 @@
-\name{data}
-\alias{data}
+\name{dataTSSS}
+\alias{dataTSSS}
 \docType{data}
 \title{
-Data Sets
+Data Sets~~
 }
 \description{
-Data.frame with data for testing the TSSS() (total soluble solids sumatory) function. 
-Column 1: sample identification code. Column 2: measurement of total soluble solids. 
-Column3 onwards: measurement of chemical components of chemical components of water 
-expressed in the same units as column 2.
+Data.frame with data for testing the TSSS() (total soluble solids summation) function. 
+Column 1: sample identification code. 
+Column 2: measurement of total soluble solids. 
+Column3 onwards: measurement of chemical components of water expressed in the same units as column 2.
+
 }
-\usage{data("data")}
+\usage{data("dataTSSS")}
 \format{
   A data frame with 411 observations on the following 16 variables.
-  \describe{
+ \describe{
     \item{\code{codigo}}{a character vector}
     \item{\code{solidostotales}}{a numeric vector}
     \item{\code{cloruro}}{a numeric vector}
@@ -34,14 +35,14 @@ expressed in the same units as column 2.
 }
 \examples{
 # Including data.frame: data in workspace.
-data("data")
+data("dataTSSS")
 # Column names of data.frame: data
-names(data) 
+names(dataTSSS) 
 # Data set type of columns of data.frame: data.
-str(data)
+str(dataTSSS)
 # Visualization of sample A45
 #The following code should display a graphic with all samples in green dots and sample
 # A45 as red big dot
-TSSS("A45",data)
+TSSS("A45",dataTSSS)
 }
 \keyword{datasets}

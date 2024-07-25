@@ -1,25 +1,24 @@
-\name{TSSS}
-\alias{TSSS}
+\name{ICHS}
+\alias{ICHS}
 \title{
-Total Soluble Solids Summation
+Ionic Charge Summation
 }
 \description{
-Plot total soluble solids summation as a function of total soluble solids measurement.
+Plots ionic charge summation as a function of conductivity.
 }
-
 \usage{
-TSSS(sample, data, conflevel = 0.95, pchdata = 19, coldata = "green", cexdata = 0.5,
-pchsample = 19, colsample = "red", cexsample = 3, xaxis = "TOTAL SOLUBLE SOLIDS",
-yaxis = "MASS SUMMATION", title = paste("Sample ", as.character(sample)), 
-linetyprediction = 2, linewidthprediction = 1, linecolorprediction = 5)
+ICHS(sample, data, conflevel = 0.95, pchdata = 19, coldata = "green", cexdata = 0.5,
+ pchsample = 19, colsample = "red", cexsample = 3, xaxis = "CONDUCTIVITY", 
+yaxis = "IONIC CHARGE SUMMATION", title = paste("Sample ", as.character(sample)),
+ linetyprediction = 2, linewidthprediction = 1, linecolorprediction = 5)
 }
 \arguments{
   \item{sample}{
 Code of the sample whose quality you want to know.
 }
   \item{data}{
-Data.frame containing code of the database samples, total soluble solids, measurements 
-of other water components.
+Data.frame containing code of the database samples, conductivity, measurements 
+of ionic water components.
 }
   \item{conflevel}{
 Significance level used in the predict function.
@@ -62,22 +61,21 @@ Linear model prediction line thickness.
 Linear model prediction line color.
 }
 }
+
 \details{
-The TSSS() function performs a linear model using column 2 (total soluble solids) as the 
-dependent variable and the other components of water as independent variables (columns 
+The ICHS() function performs a linear model using column 2 (conductivity) as the 
+independent variable and the other components of water as dependent variables (columns 
 3 onwards). Based on the linear model, a data prediction interval is obtained with a 
-certain confidence level (conflevel). Then, TSSS() graphs the values of the entire 
+certain confidence level (conflevel). Then, ICHS() graphs the values of the entire 
 database and finally graphs as a point with different color, the sample whose measurement quality you want to observe.
+
 }
 \value{
-The TSSS() function returns a graph of the sum of soluble solids as a function of the 
-measurement of total soluble solids for each sample. It contains the confidence interval 
-and the sample under observation indicated in a dotted line. If the point that 
+The ICHS() function returns a graph of the sum of ionic chemical components as a function of the measurement of conductivity for each sample. It contains the confidence interval indicated in a dotted line, and the sample under observation. If the point that 
 represents the sample is within the region delimited by the lines of the confidence 
 interval, it is presumed that there were no serious measurement errors of the components 
 analyzed.
 }
-
 \author{
 Maela Lupo, Andrea Porpatto, Alfredo Rigalli
 }
