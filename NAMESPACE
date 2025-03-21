@@ -1,2 +1,2 @@
-export("ICHS", "TSSS")
+export("CI", "ICHS", "TSSS")
 import(stats,graphics)
